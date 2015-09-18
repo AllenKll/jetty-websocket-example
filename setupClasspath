@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export CLASSPATH=`pwd`/jetty-all-uber.jar:$CLASSPATH
