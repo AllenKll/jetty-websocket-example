@@ -19,30 +19,36 @@ Building
 Could all this be put into a script? Yes, but then what would you learn?
 
 1. grab jetty
-    wget http://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.3.3.v20150827/jetty-all-9.3.3.v20150827-uber.jar -O jetty-all-uber.jar
+
+        wget http://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.3.3.v20150827/jetty-all-9.3.3.v20150827-uber.jar -O jetty-all-uber.jar
 
 2. add jetty to the classpath
-    . ./setupClasspath
 
-3. compiler the server
-    cd server
-    javac Main.java
-    javac MyWebSocketHandler.java
+        . ./setupClasspath
+
+3. compile the server
+
+        cd server
+        javac Main.java
+        javac MyWebSocketHandler.java
 
 Running
 =======
 1. run the server
-    cd server
-    java Main &
+    
+        cd server
+        java Main &
 
 2. launch a browser looking at the index.html from the client folder
-    cd ../client
-    iceweasel index.html
+    
+        cd ../client
+        iceweasel index.html
 
 
 So What?
 ========
 What's happening here?  The Main class launches jetty with a websocket handler.  You can see status messages from Jetty
+
     2015-09-18 17:28:49.548:INFO:oejs.Server:main: jetty-9.3.z-SNAPSHOT
     2015-09-18 17:28:49.579:INFO:oejs.ServerConnector:main: Started ServerConnector@484b61fc{HTTP/1.1,[http/1.1]}{0.0.0.0:9000}
     2015-09-18 17:28:49.579:INFO:oejs.Server:main: Started @223ms
